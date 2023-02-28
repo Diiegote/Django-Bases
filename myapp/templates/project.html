@@ -1,0 +1,32 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project</title>
+</head>
+
+<body>
+   <h1>Project</h1>
+   {% for x in project %}
+   
+     <article class="card">
+      <a href="{% url 'projects_detail' x.id %}">
+
+         <h1>{{ x.name }}</h1>
+      </a>
+     </article>
+
+   {% endfor %}
+</body>
+
+</html>
+
+{% endblock %}
